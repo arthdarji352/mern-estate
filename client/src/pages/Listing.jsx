@@ -62,25 +62,35 @@ export default function Listing() {
         <div>
           <Swiper navigation>
             {listing.imageUrls.map((url) => (
-              <SwiperSlide key={url}>
+              // <SwiperSlide key={url}>
+              //   <div
+              //   //   className="h-[550px]"
+              //   //   style={{
+              //   //     background: `url(${url}) center no-repeat`,
+              //   //     backgroundSize: "cover",
+              //   //   }}
+              //   >
+              //     <img
+              //       style={{
+              //         width: "100%",
+              //         backgroundSize: "cover",
+              //         backgroundRepeat: "no-repeat",
+              //         backgroundPosition: "center",
+              //       }}
+              //       src={url}
+              //       alt={url}
+              //     />
+              //   </div>
+              // </SwiperSlide>
+              <SwiperSlide>
                 <div
-                //   className="h-[550px]"
-                //   style={{
-                //     background: `url(${url}) center no-repeat`,
-                //     backgroundSize: "cover",
-                //   }}
-                >
-                  <img
-                    style={{
-                      width: "100%",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                    }}
-                    src={url}
-                    alt={url}
-                  />
-                </div>
+                  style={{
+                    background: `url(${listing.imageUrls[0]}) center no-repeat`,
+                    backgroundSize: "cover",
+                  }}
+                  className="h-[500px]"
+                  key={listing._id}
+                ></div>
               </SwiperSlide>
             ))}
           </Swiper>
